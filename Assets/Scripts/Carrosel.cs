@@ -6,8 +6,6 @@ public class Carrossel : MonoBehaviour {
     private float velocidade;
     private Vector3 posicaoInicial;
     private float tamanhoRealDaImagem;
-    [SerializeField]
-    private float teste;
 
     private void Awake() {
         posicaoInicial = transform.position;
