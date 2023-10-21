@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Obstaculo : MonoBehaviour {
@@ -16,4 +17,13 @@ public class Obstaculo : MonoBehaviour {
         // Aqui realizamos a movimentação do obstáculo.
         transform.Translate(Vector3.left * velocidade * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D outro) {
+        Destroir();
+    }
+
+    private void Destroir() {
+        Destroy(gameObject);
+    }
+
 }
