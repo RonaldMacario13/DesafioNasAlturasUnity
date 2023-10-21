@@ -22,7 +22,7 @@ public class Obstaculo : MonoBehaviour {
         Destruir();
     }
 
-    private void Destroir() {
+    public void Destruir() {
         Destroy(gameObject);
     }
 
