@@ -15,6 +15,7 @@ public class Carrossel : MonoBehaviour {
     }
 
     void Update() {
+        // Aqui estamos fazendo o comportamendo te deslocamento infinito.
         float deslocamento = Mathf.Repeat(velocidade * Time.time, tamanhoRealDaImagem);
         transform.position = posicaoInicial + Vector3.left * deslocamento;
     }
