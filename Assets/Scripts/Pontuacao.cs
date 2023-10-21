@@ -11,3 +11,10 @@ public class Pontuacao : MonoBehaviour {
         pontos++;
         textoPontuacao.text = pontos.ToString();
     }
+
+    public void ReiniciarPontuacao() {
+        pontos = 0;
+        textoPontuacao.text = pontos.ToString();
+    }
+
+}
