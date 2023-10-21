@@ -18,6 +18,7 @@ public class Obstaculo : MonoBehaviour {
         transform.Translate(Vector3.left * velocidade * Time.deltaTime);
     }
 
+    // Aqui fazemos os obstáculos se destruírem, após o uso.
     private void OnTriggerEnter2D(Collider2D outro) {
         Destroir();
     }
