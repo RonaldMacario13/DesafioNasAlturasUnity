@@ -7,6 +7,6 @@ public class Obstaculo : MonoBehaviour {
 
     void Update() {
         // Aqui realizamos a movimentação do obstáculo.
-        transform.Translate(Vector3.left * velocidade);
+        transform.Translate(Vector3.left * velocidade * Time.deltaTime);
     }
 }
