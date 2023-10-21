@@ -8,6 +8,7 @@ public class Obstaculo : MonoBehaviour {
     private float variacaoDaPosicaoY;
 
     private void Awake() {
+        // Aqui fazemos os objetos nascerem em alturas diferentes.
         transform.Translate(Vector3.up * Random.Range(-variacaoDaPosicaoY, variacaoDaPosicaoY));
     }
 
