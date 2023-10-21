@@ -18,7 +18,7 @@ public class Obstaculo : MonoBehaviour {
     }
 
     // Aqui fazemos os obstáculos se destruírem, após o uso.
-    private void OnTriggerEnter2D(Collider2D outro) {
+    private void OnTriggerEnter2D() {
         Destroir();
     }
 
