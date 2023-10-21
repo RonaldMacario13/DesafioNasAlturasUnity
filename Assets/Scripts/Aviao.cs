@@ -22,6 +22,7 @@ public class Aviao : MonoBehaviour {
 
     // Função que faz o avião ser impulsinado para cima.
     private void Impulsionar() {
-        fisica.AddForce(Vector2.up * forca, ForceMode2D.Impulse);
+        fisica.velocity = Vector2.zero;
+        fisica.AddForce(Vector2.up * forcaDePulo, ForceMode2D.Impulse);
     }
 }
