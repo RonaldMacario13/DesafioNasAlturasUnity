@@ -5,11 +5,13 @@ public class Aviao : MonoBehaviour {
     private Rigidbody2D fisica;
     [SerializeField] // Isso faz com que seja mostrado no painel "Inspector" do Unity.
     private float forcaDePulo;
+    private Diretor diretor;
 
     // Awake é chamado quando uma instância de script habilitada está sendo carregada.
     private void Awake() {
         // Aqui estamos buscando o Rigidbidy2D que está no componete.
         fisica = GetComponent<Rigidbody2D> ();
+        diretor = FindObjectOfType<Diretor>();
     }
 
     // Essa função é chamada a cada frame.
@@ -25,4 +27,10 @@ public class Aviao : MonoBehaviour {
         fisica.velocity = Vector2.zero;
         fisica.AddForce(Vector2.up * forcaDePulo, ForceMode2D.Impulse);
     }
+
+    private void OnCollisionEnter2D() {
+        fisica.simulated = false;
+        diretor.FinalizarJogo();
+    }
+
 }
