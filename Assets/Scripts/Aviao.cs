@@ -4,7 +4,7 @@ public class Aviao : MonoBehaviour {
 
     private Rigidbody2D fisica;
     [SerializeField] // Isso faz com que seja mostrado no painel "Inspector" do Unity.
-    private float forca;
+    private float forcaDePulo;
 
     // Awake é chamado quando uma instância de script habilitada está sendo carregada.
     private void Awake() {
