@@ -38,4 +38,9 @@ public class Aviao : MonoBehaviour {
         diretor.FinalizarJogo();
     }
 
+    public void Reiniciar() {
+        transform.position = posicaoInicial;
+        fisica.simulated = true;
+    }
+
 }
