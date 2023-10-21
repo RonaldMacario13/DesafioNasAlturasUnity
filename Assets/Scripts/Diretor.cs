@@ -4,6 +4,11 @@ public class Diretor : MonoBehaviour {
 
     [SerializeField]
     private GameObject imagemGameOver;
+    private Aviao aviao;
+
+    private void Start() {
+        aviao = FindObjectOfType<Aviao>();
+    }
 
     public void FinalizarJogo() {
         Time.timeScale = 0;
