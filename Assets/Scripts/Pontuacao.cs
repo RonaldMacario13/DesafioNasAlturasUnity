@@ -1,0 +1,13 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Pontuacao : MonoBehaviour {
+
+    [SerializeField]
+    private Text textoPontuacao;
+    private int pontos;
+
+    public void AdicionarPontos() {
+        pontos++;
+        textoPontuacao.text = pontos.ToString();
+    }
