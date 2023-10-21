@@ -21,4 +21,12 @@ public class Diretor : MonoBehaviour {
         aviao.Reiniciar();
         DestruirObstaculos();
     }
+
+    private void DestruirObstaculos() {
+        Obstaculo[] obstaculos = FindObjectsOfType<Obstaculo>();
+        foreach (Obstaculo obstaculo in obstaculos) {
+            obstaculo.Destruir();
+        }
+    }
+
 }
