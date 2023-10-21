@@ -6,10 +6,19 @@ public class Obstaculo : MonoBehaviour {
     private float velocidade;
     [SerializeField]
     private float variacaoDaPosicaoY;
+    private Vector3 posicaoDoAviao;
+    private bool pontuado;
+    private Pontuacao pontuacao;
+
 
     private void Awake() {
         // Aqui fazemos os objetos nascerem em alturas diferentes.
         transform.Translate(Vector3.up * Random.Range(-variacaoDaPosicaoY, variacaoDaPosicaoY));
+    }
+
+    private void Start() {
+        posicaoDoAviao = FindObjectOfType<Aviao>().transform.position;
+        pontuacao = FindObjectOfType<Pontuacao>();
     }
 
     private void Update() {
