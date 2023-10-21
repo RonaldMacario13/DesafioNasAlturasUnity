@@ -11,7 +11,7 @@ public class Obstaculo : MonoBehaviour {
         transform.Translate(Vector3.up * Random.Range(-variacaoDaPosicaoY, variacaoDaPosicaoY));
     }
 
-    void Update() {
+    private void Update() {
         // Aqui realizamos a movimentação do obstáculo.
         transform.Translate(Vector3.left * velocidade * Time.deltaTime);
     }

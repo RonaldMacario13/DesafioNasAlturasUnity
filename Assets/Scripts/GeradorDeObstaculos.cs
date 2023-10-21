@@ -12,7 +12,7 @@ public class GeradorDeObstaculos : MonoBehaviour {
         cronometro = tempoParaGerar;
     }
 
-    void Update() {
+    private void Update() {
         // Aqui fazemos ser gerado um objeto a cada X segundos, de acordo com o que vier do "tempoParaGerar".
         cronometro -= Time.deltaTime;
 
