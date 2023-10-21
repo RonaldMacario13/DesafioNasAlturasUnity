@@ -24,6 +24,10 @@ public class Obstaculo : MonoBehaviour {
     private void Update() {
         // Aqui realizamos a movimentação do obstáculo.
         transform.Translate(Vector3.left * velocidade * Time.deltaTime);
+        if (!pontuado && transform.position.x < posicaoDoAviao.x) {
+            pontuado = true;
+            pontuacao.AdicionarPontos();
+        }
     }
 
     // Aqui fazemos os obstáculos se destruírem, após o uso.
