@@ -6,11 +6,16 @@ public class Aviao : MonoBehaviour {
     [SerializeField] // Isso faz com que seja mostrado no painel "Inspector" do Unity.
     private float forcaDePulo;
     private Diretor diretor;
+    private Vector3 posicaoInicial;
 
     // Awake é chamado quando uma instância de script habilitada está sendo carregada.
     private void Awake() {
         // Aqui estamos buscando o Rigidbidy2D que está no componete.
         fisica = GetComponent<Rigidbody2D> ();
+        posicaoInicial = transform.position;
+    }
+
+    private void Start() {
         diretor = FindObjectOfType<Diretor>();
     }
 
