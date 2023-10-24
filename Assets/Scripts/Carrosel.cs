@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Classe responsável por fazer com que os objetos, que precisam, se repitam infinitamente em carrossel.
 public class Carrossel : MonoBehaviour {
 
     [SerializeField]
