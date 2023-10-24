@@ -454,6 +454,7 @@ GameObject:
   - component: {fileID: 617743249}
   - component: {fileID: 617743251}
   - component: {fileID: 617743250}
+  - component: {fileID: 617743252}
   m_Layer: 0
   m_Name: aviao1
   m_TagString: Untagged
@@ -656,6 +657,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forcaDePulo: 5
+--- !u!95 &617743252
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617743246}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce2dc17b08fddbb4899e1e7c3c99b22c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &777915567
 GameObject:
   m_ObjectHideFlags: 0
