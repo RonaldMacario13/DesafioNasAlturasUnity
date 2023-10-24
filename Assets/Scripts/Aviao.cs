@@ -38,7 +38,7 @@ public class Aviao : MonoBehaviour {
         diretor.FinalizarJogo();
     }
 
-    public void Reiniciar() {
+    public void ReiniciarAviao() {
         transform.position = posicaoInicial;
         fisica.simulated = true;
     }
