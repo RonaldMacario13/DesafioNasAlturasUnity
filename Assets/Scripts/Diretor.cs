@@ -1,5 +1,7 @@
 using UnityEngine;
 
+
+// Esta classe está responsável por controlar todo o compotamento do jogo.
 public class Diretor : MonoBehaviour {
 
     [SerializeField]
@@ -12,19 +14,22 @@ public class Diretor : MonoBehaviour {
         pontuacao = FindObjectOfType<Pontuacao>();
     }
 
+    // Método responsável por parar o jogo e mostrar "Game Over" ao perder o jogo.
     public void FinalizarJogo() {
         Time.timeScale = 0;
         imagemGameOver.SetActive(true);
     }
 
+    // Método resposável por organizar todo o cenário e reiniciá-lo.
     public void ReiniciarJogo() {
         imagemGameOver.SetActive(false);
         Time.timeScale = 1;
-        aviao.Reiniciar();
+        aviao.ReiniciarAviao();
         DestruirObstaculos();
         pontuacao.ReiniciarPontuacao();
     }
 
+    // Método responsável por destruir todos os obstáculos em cena, no momento.
     private void DestruirObstaculos() {
         Obstaculo[] obstaculos = FindObjectsOfType<Obstaculo>();
         foreach (Obstaculo obstaculo in obstaculos) {
