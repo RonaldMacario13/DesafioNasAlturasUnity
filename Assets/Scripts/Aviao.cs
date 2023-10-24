@@ -19,25 +19,27 @@ public class Aviao : MonoBehaviour {
         diretor = FindObjectOfType<Diretor>();
     }
 
-    // Essa função é chamada a cada frame.
+    // Essa método é chamada a cada frame.
     private void Update() {
-        // Esse IF é responsável por chamar a função Impulsionar, que faz o avião "Voar".
+        // Esse IF é responsável por chamar o método Impulsionar, que faz o avião "Voar".
         if(Input.GetButtonDown("Fire1")) {
             Impulsionar();
         }
     }
 
-    // Função que faz o avião ser impulsinado para cima.
+    // Método que faz o avião ser impulsinado para cima.
     private void Impulsionar() {
         fisica.velocity = Vector2.zero;
         fisica.AddForce(Vector2.up * forcaDePulo, ForceMode2D.Impulse);
     }
 
+    // Método responsável pelo fim do jogo ao colidir nos obstáculos.
     private void OnCollisionEnter2D() {
         fisica.simulated = false;
         diretor.FinalizarJogo();
     }
 
+    // Mátodo responsável por reiniciar posição do avião, após o fim do jogo.
     public void ReiniciarAviao() {
         transform.position = posicaoInicial;
         fisica.simulated = true;
