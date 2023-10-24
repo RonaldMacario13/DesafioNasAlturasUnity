@@ -12,7 +12,7 @@ public class Obstaculo : MonoBehaviour {
 
 
     private void Awake() {
-        // Aqui fazemos os objetos nascerem em alturas diferentes.
+        // Aqui fazemos os obstáculos nascerem em alturas diferentes.
         transform.Translate(Vector3.up * Random.Range(-variacaoDaPosicaoY, variacaoDaPosicaoY));
     }
 
@@ -35,6 +35,7 @@ public class Obstaculo : MonoBehaviour {
         Destruir();
     }
 
+    // Método que faz com que obstáculos sejam destruídos.
     public void Destruir() {
         Destroy(gameObject);
     }
