@@ -8,10 +8,12 @@ public class Diretor : MonoBehaviour {
     private GameObject imagemGameOver;
     private Aviao aviao;
     private Pontuacao pontuacao;
+    private InterfaceGameOver interfaceGameOver;
 
     private void Start() {
         aviao = FindObjectOfType<Aviao>();
         pontuacao = FindObjectOfType<Pontuacao>();
+        interfaceGameOver = FindObjectOfType<InterfaceGameOver>();
     }
 
     // Método responsável por parar o jogo e mostrar "Game Over" ao perder o jogo.
