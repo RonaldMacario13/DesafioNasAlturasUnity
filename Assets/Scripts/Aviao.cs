@@ -7,6 +7,7 @@ public class Aviao : MonoBehaviour {
     private float forcaDePulo;
     private Diretor diretor;
     private Vector3 posicaoInicial;
+    private bool deveImpulsionar;
 
     // Awake é chamado quando uma instância de script habilitada está sendo carregada.
     private void Awake() {
@@ -22,7 +23,14 @@ public class Aviao : MonoBehaviour {
     // Essa método é chamada a cada frame.
     private void Update() {
         // Esse IF é responsável por chamar o método Impulsionar, que faz o avião "Voar".
+        // Verificação de Input deve estar dentro do Update, é uma boa prática.
         if(Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.Space)) {
+            deveImpulsionar = true;
+        }
+    }
+
+    private void FixedUpdate() {
+        if (deveImpulsionar) {
             Impulsionar();
         }
     }
@@ -31,6 +39,7 @@ public class Aviao : MonoBehaviour {
     private void Impulsionar() {
         fisica.velocity = Vector2.zero;
         fisica.AddForce(Vector2.up * forcaDePulo, ForceMode2D.Impulse);
+        deveImpulsionar = false;
     }
 
     // Método responsável pelo fim do jogo ao colidir nos obstáculos.
