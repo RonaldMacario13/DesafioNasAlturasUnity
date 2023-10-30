@@ -22,7 +22,7 @@ public class Aviao : MonoBehaviour {
     // Essa método é chamada a cada frame.
     private void Update() {
         // Esse IF é responsável por chamar o método Impulsionar, que faz o avião "Voar".
-        if(Input.GetButtonDown("Fire1")) {
+        if(Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.Space)) {
             Impulsionar();
         }
     }
