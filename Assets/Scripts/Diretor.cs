@@ -4,8 +4,6 @@ using UnityEngine;
 // Esta classe está responsável por controlar todo o compotamento do jogo.
 public class Diretor : MonoBehaviour {
 
-    [SerializeField]
-    private GameObject imagemGameOver;
     private Aviao aviao;
     private Pontuacao pontuacao;
     private InterfaceGameOver interfaceGameOver;
@@ -19,7 +17,8 @@ public class Diretor : MonoBehaviour {
     // Método responsável por parar o jogo e mostrar "Game Over" ao perder o jogo.
     public void FinalizarJogo() {
         Time.timeScale = 0;
-        imagemGameOver.SetActive(true);
+        pontuacao.SalvarRecorde();
+        interfaceGameOver.MostrarInterface();
     }
 
     // Método resposável por organizar todo o cenário e reiniciá-lo.
