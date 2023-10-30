@@ -23,7 +23,7 @@ public class Diretor : MonoBehaviour {
 
     // Método resposável por organizar todo o cenário e reiniciá-lo.
     public void ReiniciarJogo() {
-        imagemGameOver.SetActive(false);
+        interfaceGameOver.EsconderInterface();
         Time.timeScale = 1;
         aviao.ReiniciarAviao();
         DestruirObstaculos();

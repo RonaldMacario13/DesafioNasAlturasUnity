@@ -13,6 +13,10 @@ public class InterfaceGameOver : MonoBehaviour {
         imagemGameOver.SetActive(true);
     }
 
+    public void EsconderInterface() {
+        imagemGameOver.SetActive(false);
+    }
+
     private void AtualizarInterfaceGrafica() {
         int recorde = PlayerPrefs.GetInt("recorde");
         ValorRecorde.text = recorde.ToString();
